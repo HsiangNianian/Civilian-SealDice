@@ -4,7 +4,8 @@
 // @version      2.0.2
 // @description  两个后日谈规则【.rnc】与【.rna】,帮助命令【.rnc help】与【.rna help】
 // 2023-03-27
-// @license      Apache-2
+// @license      by-nc-sa 4.0
+// @homepageURL  https://github.com/HsiangNianian/sealdice
 // ==/UserScript==
 
 let ext = seal.ext.find('rnc');
