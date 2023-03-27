@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         后日谈规则
 // @author       简律纯
-// @version      2.0.2
+// @version      2.0.3
 // @description  两个后日谈规则【.rnc】与【.rna】,帮助命令【.rnc help】与【.rna help】
 // 2023-03-27
 // @license      by-nc-sa 4.0
@@ -10,7 +10,7 @@
 
 let ext = seal.ext.find('rnc');
 if (!ext) {
-  ext = seal.ext.new('rnc', '简律纯', '2.0.2');
+  ext = seal.ext.new('rnc', '简律纯', '2.0.3');
   seal.ext.register(ext);
 }
 
@@ -90,8 +90,8 @@ rna.solve = (ctx, msg, cmdArgs) => {
     }
     default: {
       const rollDice = (n = 1, d = 10, mod = 0) => {
-        const rolls_ = Array.from({ length: n }, () => Math.ceil(Math.random() * d));
-        const rolls = rolls_.map((roll) => roll + mod);
+        const _rolls_ = Array.from({ length: n }, () => Math.ceil(Math.random() * d));
+        const rolls = _rolls_.map((roll) => roll + mod);
         const maxRoll = Math.max(...rolls);
         let result;
         //单骰
@@ -101,12 +101,12 @@ rna.solve = (ctx, msg, cmdArgs) => {
             result = "大失败!";
           } else if (maxRoll >= 2 && maxRoll <= 5) {
             //[2,5]
-            result = "失败!";
-          } else if (maxRoll >= 6 && maxRoll <= 9) {
+            result = "失败";
+          } else if (maxRoll >= 6 && maxRoll <= 10) {
             //[6,9]
-            result = "成功!"
-          } else if (maxRoll >= 10) {
-            //[10,+∞]
+            result = "成功"
+          } else if (maxRoll >= 11) {
+            //[11,+∞]
             result = "大成功!"
           }
         }
@@ -116,20 +116,20 @@ rna.solve = (ctx, msg, cmdArgs) => {
             //(-∞,6) U {1}
             result = "大失败!";
           }
-          else if (rolls.every((roll) => roll >= 6 && roll <= 9)) {
-            //[6,9]
-            result = "成功!";
-          }
-          else if (rolls.some((roll) => roll >= 10)) {
-            //[10,+∞]
+          else if (maxRoll >= 11) {
+            //[11,+∞]
             result = "大成功!";
-          } else {
+          }
+          else if (maxRoll >= 6 && maxRoll <= 10) {
+            //[6,10]
+            result = "成功";
+          } else if ((maxRoll > 1 && maxRoll < 6) || (maxRoll < 1)) {
             //(-∞,1) U (1,6)
-            result = "失败!";
+            result = "失败";
           }
         }
         const finalResult = maxRoll;
-        return `${n}D${d}${mod > 0 ? `+${mod}` : mod < 0 ? mod : ""}=[${rolls_.join(",")}]${mod !== 0 ? mod > 0 ? `+${mod}` : mod < 0 ? mod : "" : ""}=${finalResult} ${result}`;
+        return `${n}D${d}${mod > 0 ? `+${mod}` : mod < 0 ? mod : ""}=[${_rolls_.join(",")}]${mod !== 0 ? mod > 0 ? `+${mod}` : mod < 0 ? mod : "" : ""}${n > 1 && mod !== 0 ? `=[${rolls.join(",")}]` : ""}=${finalResult} ${result}`;
       };
 
       let modify = msg.message.match(/[+-](\d+)/);
@@ -153,7 +153,7 @@ rna.solve = (ctx, msg, cmdArgs) => {
       } else {
         sides = sides[1]
       }
-      seal.replyToSender(ctx, msg, `<${msg.sender.nickname}>进行攻击检定:${rollDice(numDice, sides, addvalue)}`)
+      seal.replyToSender(ctx, msg, `<${msg.sender.nickname}>进行检定:${rollDice(numDice, sides, addvalue)}`)
     }
   }
 }
