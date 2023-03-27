@@ -112,7 +112,7 @@ rna.solve = (ctx, msg, cmdArgs) => {
         }
         //多骰
         if (n !== 1) {
-          if (rolls.every((roll) => roll < 6) && (rolls.includes(1) || rolls.some((roll) => roll < 1)) {
+          if (rolls.every((roll) => roll < 6) && (rolls.includes(1) || rolls.some((roll) => roll < 1))) {
             //(-∞,6) U {1}
             result = "大失败!";
           }
