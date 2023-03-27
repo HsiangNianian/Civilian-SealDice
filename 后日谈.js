@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         后日谈规则
 // @author       简律纯
-// @version      2.0.3
+// @version      2.0.4
 // @description  两个后日谈规则【.rnc】与【.rna】,帮助命令【.rnc help】与【.rna help】
 // 2023-03-27
 // @license      by-nc-sa 4.0
 // @homepageURL  https://github.com/HsiangNianian/sealdice
 // ==/UserScript==
 
-let ext = seal.ext.find('rnc');
+let ext = seal.ext.find('Rsp');
 if (!ext) {
-  ext = seal.ext.new('rnc', '简律纯', '2.0.3');
+  ext = seal.ext.new('Rsp', '简律纯', '2.0.4');
   seal.ext.register(ext);
 }
 
@@ -112,7 +112,7 @@ rna.solve = (ctx, msg, cmdArgs) => {
         }
         //多骰
         if (n !== 1) {
-          if (rolls.every((roll) => roll < 6) && rolls.includes(1)) {
+          if (rolls.every((roll) => roll < 6) && (rolls.includes(1) || rolls.some((roll) => roll < 1)) {
             //(-∞,6) U {1}
             result = "大失败!";
           }
@@ -123,7 +123,7 @@ rna.solve = (ctx, msg, cmdArgs) => {
           else if (maxRoll >= 6 && maxRoll <= 10) {
             //[6,10]
             result = "成功";
-          } else if ((maxRoll > 1 && maxRoll < 6) || (maxRoll < 1)) {
+          } else if ((maxRoll > 1 && maxRoll < 6) { 
             //(-∞,1) U (1,6)
             result = "失败";
           }
