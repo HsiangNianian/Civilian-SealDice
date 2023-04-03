@@ -5,7 +5,7 @@
 // @description  .d atk <属性值>//录入攻击属性\n.d def <属性值>//录入防御属性\n.d wit <属性值>//录入防御属性\n.d show //[权限]公开属性\n.d clear //[权限]清空属性列表
 // 2023-04-03
 // @license      by-nc-sa 4.0
-// @homepageURL  https://github.com/HsiangNianian/sealdice
+// @homepageURL  https://sealdice.civilian.jyunko.cn
 // ==/UserScript==
 let ext = seal.ext.find('adw');
 if (!ext) {

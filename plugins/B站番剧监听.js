@@ -5,7 +5,7 @@
 // @description  bangumi
 // 2023-03-27
 // @license      by-nc-sa 4.0
-// @homepageURL  https://github.com/HsiangNianian/sealdice
+// @homepageURL  https://sealdice.civilian.jyunko.cn
 // ==/UserScript==
 
 let ext = seal.ext.find('bangumi');
