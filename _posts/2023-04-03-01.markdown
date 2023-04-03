@@ -8,7 +8,7 @@ categories: ['js','JavaScript','sealdice']
 2023-04-03
 ----------
 
-* `v1.0.3` [`属性公示.js`](./plugins/属性公示.js)
+* `v1.0.3` [`属性公示.js`](https://github.com/HsiangNianian/sealdice/tree/master/plugins/属性公示.js)
   
   .d atk <属性值>//录入攻击属性
   
