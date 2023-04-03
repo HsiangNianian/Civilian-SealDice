@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ page.date | date: date_format }}
+            </time>
+            {% if page.author %}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+            {% endif %}
+            {% if page.updated %}
+            Edited: <span itemprop="updated" itemscope itemtype="http://schema.org/Person"><span itemprop="updated">{{ page.updated }}</span></span>
+            {% endif %}
+        </p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    <!-- mathjax -->
+    {% if page.mathjax %}
+        <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
+
+    <!-- Share -->
+    <strong>Share:</strong>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Facademic.jyunko.cn&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">Facebook</a> |
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Facademic.jyunko.cn&title=&summary=&source=http%3A%2F%2Facademic.jyunko.cn" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">LinkedIn</a> |
+    <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Facademic.jyunko.cn&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">Pinterest</a> |
+    <a href="http://www.reddit.com/submit?url=http%3A%2F%2Facademic.jyunko.cn&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">Reddit</a> |
+   <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Facademic.jyunko.cn&text=:%20http%3A%2F%2Facademic.jyunko.cn&via=academic.jyunko.cn" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">Twitter</a>
+    <br/><br/>
+
+    {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+    {% endif %}
+</article>
