@@ -123,7 +123,7 @@ rna.solve = (ctx, msg, cmdArgs) => {
           else if (maxRoll >= 6 && maxRoll <= 10) {
             //[6,10]
             result = "成功";
-          } else if (maxRoll > 1 && maxRoll < 6) { 
+          } else if (maxRoll > 1 && maxRoll < 6) {
             //(-∞,1) U (1,6)
             result = "失败";
           }
