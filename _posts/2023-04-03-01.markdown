@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "属性公示板"
+title:  "属性公示"
 date: 2023-04-03 15:54:00 +0800
 categories: ['js','JavaScript','sealdice']
 ---
@@ -8,7 +8,7 @@ categories: ['js','JavaScript','sealdice']
 2023-04-03
 ----------
 
-* `v1.0.3` [`属性公示.js`](./%E5%B1%9E%E6%80%A7%E5%85%AC%E7%A4%BA.js)
+* `v1.0.3` [`属性公示.js`](./plugins/属性公示.js)
   
   .d atk <属性值>//录入攻击属性
   
