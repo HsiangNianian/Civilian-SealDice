@@ -37,7 +37,7 @@ copyright: 2023
 disqus:
   shortname: cypress-github-io
 
-show_excerpts: true
+show_excerpts: false
 
 markdown: kramdown
 
