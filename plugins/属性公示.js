@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         属性公示
 // @author       简律纯
-// @version      1.0.3
+// @version      1.0.4
 // @description  .d atk <属性值>//录入攻击属性\n.d def <属性值>//录入防御属性\n.d wit <属性值>//录入防御属性\n.d show //[权限]公开属性\n.d clear //[权限]清空属性列表
 // 2023-04-03
 // @license      by-nc-sa 4.0
@@ -9,7 +9,7 @@
 // ==/UserScript==
 let ext = seal.ext.find('adw');
 if (!ext) {
-    ext = seal.ext.new('adw', '简律纯', '1.0.3');
+    ext = seal.ext.new('adw', '简律纯', '1.0.4');
     seal.ext.register(ext);
 }
 
@@ -30,7 +30,7 @@ adw.solve = (ctx, msg, cmdArgs) => {
     if (value !== value) {
         switch (type) {
             case 'show':
-                if (ctx.privilegeLevel === 100) {
+                if (ctx.privilegeLevel >= 40) {
                     let output = '攻击\n';
                     for (const [name, value] of Object.entries(data.atk)) {
                         output += `<${name}>: ${value}\n`;
@@ -54,7 +54,7 @@ adw.solve = (ctx, msg, cmdArgs) => {
                     return seal.ext.newCmdExecuteResult(true);
                 }
             case 'clear':
-                if (ctx.privilegeLevel === 100) {
+                if (ctx.privilegeLevel >= 40) {
                     data.atk = {};
                     data.def = {};
                     data.wit = {};
