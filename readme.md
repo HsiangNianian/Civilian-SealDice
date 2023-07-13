@@ -9,19 +9,26 @@ My sealdice plugins
 - `1.3.1` [`splatoon信息查询.js`]()
 
   **加入了splatoon信息查询.js：**
-  .splt map [参数]
+  
+  `.splt map [参数]` </br>
   查询当前时间经过[参数]小时后的地图，[参数]为空查询当前地图。
-  .splt work
+  
+  `.splt work` </br>
   查询当前时间鲑鱼跑地图，如果距离下一次地图更新不到12小时则会附带下个时段地图数据。
-  .splt shop
+  
+  `.splt shop` </br>
   查询当前时间的商店。
-  .splt yb/td/zd
+  
+  `.splt yb/td/zd` </br>
   查询一般模式地图轮换(当前、下次、下下次)。
-  .splt mtt/mtc
+  
+  `.splt mtt/mtc`</br>
   查询蛮颓模式-挑战地图轮换(当前、下次、下下次)。
-  .splt mtk/mto
+  
+  `.splt mtk/mto` </br>
   查询蛮颓模式-开放地图轮换(当前、下次、下下次)。
-  .splt x
+  
+  `.splt x` </br>
   查询X比赛地图轮换(当前、下次、下下次)。
   
 
