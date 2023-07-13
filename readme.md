@@ -6,7 +6,7 @@ My sealdice plugins
 2023-07-13
 ----------
 
-- `1.3.1` [`splatoon信息查询.js`]()
+- `1.3.1` [`splatoon信息查询.js`](https://github.com/pineoncellar/Civilian-SealDice/blob/master/plugins/splatoon%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2.js)
 
   
   `.splt map [参数]` </br>
