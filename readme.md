@@ -1,14 +1,13 @@
 My sealdice plugins
 ===================
 
-> 我在文职期间接受的一切有关于海豹骰的委托。
+> [简律纯](https://github.com/HsiangNianian)在文职期间接受的一切有关于海豹骰的委托。
 
 2023-07-13
 ----------
 
 - `1.3.1` [`splatoon信息查询.js`]()
 
-  **加入了splatoon信息查询.js：**
   
   `.splt map [参数]` </br>
   查询当前时间经过[参数]小时后的地图，[参数]为空查询当前地图。
@@ -30,7 +29,8 @@ My sealdice plugins
   
   `.splt x` </br>
   查询X比赛地图轮换(当前、下次、下下次)。
-  
+
+> made by 地窖上的松 & Mouwoo
 
 2023-04-03
 ----------
