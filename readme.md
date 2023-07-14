@@ -7,8 +7,7 @@ My sealdice plugins
 ----------
 
 * `1.3.1` [`splatoon信息查询.js`](https://github.com/pineoncellar/Civilian-SealDice/blob/master/plugins/splatoon%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2.js)
-
-> made by 地窖上的松 & Mouwoo
+  made by 地窖上的松 & Mouwoo
 
 2023-04-03
 ----------
