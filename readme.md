@@ -3,6 +3,13 @@ My sealdice plugins
 
 > [简律纯](https://github.com/HsiangNianian)在文职期间接受的一切有关于海豹骰的委托。
 
+Site Preview
+------------
+
+* [jyunko.cn](sealdice.civilian.jyunko.cn) _recommend_
+* [Production](https://civilian-seal-dice-55sqkvwsa-hsiangnianian.vercel.app/)
+* [Vercel-Master](https://civilian-seal-dice-git-master-hsiangnianian.vercel.app/)
+
 2023-07-13
 ----------
 
