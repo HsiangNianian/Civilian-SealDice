@@ -6,7 +6,7 @@ My sealdice plugins
 Site Preview
 ------------
 
-* [jyunko.cn](https://sealdice.civilian.jyunko.cn) _(recommend)_
+* [jyunko.cn](https://sealdice.jyunko.cn) _(recommend)_
 * [Production](https://civilian-seal-dice-55sqkvwsa-hsiangnianian.vercel.app/)
 * [Vercel-Master](https://civilian-seal-dice-git-master-hsiangnianian.vercel.app/)
 
